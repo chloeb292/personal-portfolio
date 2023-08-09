@@ -1,15 +1,50 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div class="home">
+{% load static %}
+<div class="about">
     <h1>About</h1>
+    <img src="{% static '/images/me.png' %}" alt="A picture of me">
+        <p class = "bio">Hello! My name is Chloe Berry, and I'm a computer science student with a deep passion for coding, art, and supporting women in the tech industry. I believe in merging creativity with technology to create innovative solutions. My journey in the tech world has been fueled by my desire to continuously learn and contribute. When I'm not coding, you'll find me dabbling in art or advocating for gender equality in tech spaces.</p>
+    
 
+    <!-- Contact Info -->
+    <div class="contact-section">
+        <div class="contact-card">
+            <i class="contact-icon fas fa-envelope"></i>
+            <a class="contact-link" href="mailto:chloeb2@usf.edu">chloeb2@usf.edu</a>
+        </div>
+        <div class="contact-card">
+            <i class="contact-icon fab fa-github"></i>
+            <a class="contact-link" href="https://github.com/chloeb292" target="_blank">chloeb292</a>
+        </div>
+        <div class="contact-card">
+            <i class="contact-icon fab fa-linkedin"></i>
+            <a class="contact-link" href="https://www.linkedin.com/in/chloe-b-b89ba6135/" target="_blank">Chloe Berry</a>
+        </div>
+    </div>
+
+
+
+    <!-- Experience -->
     <h1>Experience</h1>
-    <li>
-        {% for experience in experiences%}
-        {{experience.title}}:
-        {{experience.description}}
-        {% endfor %}
-    </li>
-</div>
+    {% for experience in experiences %}
+    <div class="experience-card">
+        <div class="experience-header">
+            <h2 class="experience-title">{{ experience.title }}</h2>
+            <p class="experience-date">
+                {{ experience.start_date }} - 
+                {% if experience.end_date %}
+                    {{ experience.end_date }}
+                {% else %}
+                    Present
+                {% endif %}
+            </p>
+        </div>
+        <p class="experience-company">{{ experience.company }}</p>
+        <p class="experience-description">{{ experience.description }}</p>
+    </div>
+    {% endfor %}
+
+
 {% endblock %}

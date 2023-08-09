@@ -1,10 +1,16 @@
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'portinfo/style.css' %}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+
 <!DOCTYPE html>
 <html>
 <head>
     <title>Your Portfolio</title>
 </head>
 <body>
-    <nav>
+    <nav class="navbar">
         <ul>
             <li><a href="/">Home</a></li>
             <li><a href="{% url 'about' %}">About</a></li>

@@ -1,0 +1,312 @@
+body {
+    font-family: 'Arial', sans-serif; 
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: #007BFF;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+/* Home page styles */
+.home {
+    text-align: center;
+    padding: 50px 0;
+}
+
+.home h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+.home p1 {
+    font-size: 1.2em;
+    display: block; /* Since p1 isn't a standard HTML element, treat it like a block */
+    margin: 20px 0;
+}
+
+
+
+
+
+.instagram-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* This creates a 3-column grid; adjust as needed */
+    gap: 20px; /* Gap between grid items */
+    padding: 20px;
+}
+
+.insta-embed {
+    overflow: hidden;
+    transition: transform 0.5s; /* Smooth transform transition */
+    transform: scale(0.95); 
+}
+
+/* Floating hover effect */
+.insta-embed:hover {
+    transform: translateY(-10px); /* Moves the box up on hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Adds a shadow beneath the lifted box */
+}
+
+
+.articles {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+
+.card {
+    width: 400px;  /* Set fixed width to control size */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 0 10px;
+    padding: 10px;
+    transition: transform 0.2s;
+    border-radius: 5px;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px 4px 0 0;
+}
+
+.card h2 {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.card p {
+    color: #666;
+    font-size: 14px;
+    margin: 10px 0;
+}
+
+.card a {
+    display: inline-block;
+    background-color: #000;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 3px;
+    font-size: 14px;
+    text-decoration: none;
+    transition: background-color 0.2s;
+}
+
+.card a:hover {
+    background-color: #333;
+}
+
+
+
+
+
+
+/* Navbar styles */
+
+.navbar {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky; /* This makes sure the navbar sticks to the top as you scroll */
+    top: 0; /* Stick to the top of the viewport */
+    z-index: 1000; /* Ensure the navbar remains above all other content */
+}
+
+.navbar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-evenly; /* This evenly distributes the space among the list items */
+    align-items: center;
+}
+
+.navbar li {
+    padding: 15px 20px; /* This provides a comfortable clickable area for each item */
+}
+
+.navbar a {
+    font-size: 1.1em;
+    color: #333;
+    transition: color 0.3s ease; /* This provides a smooth color transition on hover */
+}
+
+.navbar a:hover {
+    color: #007BFF; /* This color is consistent with the link hover effect in the previous style I provided */
+}
+
+/* You might want to highlight the current page to give users a clear indication of their location on your site. */
+.navbar a.active {
+    font-weight: bold;
+    border-bottom: 2px solid #007BFF; 
+}
+
+/* Content styling */
+
+.content {
+    padding: 20px;
+}
+
+
+
+/* About page styles */
+
+.about {
+    padding: 40px 0;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.about h1 {
+    font-size: 2.7em;
+    margin-bottom: 20px;
+}
+
+.about p {
+    font-size: 1.2em;
+    max-width: 600px; /* Limits the width for better readability */
+    line-height: 1.5; /* Improved readability */
+    margin: 20px; /* Space between bio and image */
+    display: inline-block; /* To place it next to the image */
+    vertical-align: top; /* Aligns the top of the paragraph with the top of the image */
+}
+
+.about p.bio {
+    font-size: 1.2em;
+    max-width: 600px; /* Limits the width for better readability */
+    line-height: 1.5; /* Improved readability */
+    margin: 20px; /* Space between bio and image */
+    padding-top: 30px;
+    display: inline-block; /* To place it next to the image */
+    vertical-align: top; /* Aligns the top of the paragraph with the top of the image */
+}
+
+.about img {
+    width: 250px;
+    height: 300px;
+    border-radius: 50%; /* Renders the image as a circle */
+    display: inline-block; /* Places it next to the biography */
+    vertical-align: top; /* Aligns the top of the image with the top of the paragraph */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optional: Gives a bit of depth */
+}
+
+/* Contact info */
+.about ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.about li {
+    margin-bottom: 10px;
+}
+
+.about a {
+    color: #007BFF;
+    transition: color 0.3s ease;
+}
+
+.about a:hover {
+    color: #0056b3;
+}
+
+.about li {
+    margin: 10px 0;
+}
+.experience-card {
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 40px;
+    margin: 20px 0;
+    transition: box-shadow 0.3s ease;
+}
+
+.experience-card:hover {
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* A subtle hover effect */
+}
+
+.experience-header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: baseline; 
+}
+
+.experience-title {
+    font-size: 1.8em;
+    margin: 0;
+}
+
+.experience-date {
+    font-size: 0.9em;
+    color: #777;
+    margin-bottom: 10px;
+}
+
+.experience-company {
+    font-size: 1.2em;
+    margin: 25px 0;
+    font-weight: bold;
+    color: #444; /* slightly subdued color to differentiate from title */
+}
+
+.experience-description {
+    font-size: 1.1em;
+}
+
+
+/* ... [rest of your CSS] ... */
+
+.contact-section {
+    display: flex;
+    justify-content: center; /* Aligns items at the center, reducing the space between them */
+    flex-wrap: wrap; /* Allows cards to wrap to the next line if there's not enough space */
+    padding: 20px 0;
+}
+
+.contact-card {
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 15px; /* Reduced padding to make cards smaller */
+    margin: 10px 15px; /* Adjusted margin to reduce space between cards */
+    flex-basis: calc(25% - 30px); /* Adjusting the width of each card. The calculation reduces the card width, so the cards are not as long. */
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.contact-icon {
+    font-size: 24px;
+    margin-right: 15px; /* Reduced margin to make cards smaller */
+}
+
+.contact-link {
+    color: #007BFF;
+    transition: color 0.3s ease;
+    font-size: 1.2em;
+}
+
+.contact-link:hover {
+    color: #0056b3;
+}
+
+.contact-card:hover {
+    background-color: #b5d6b5;
+}
+
