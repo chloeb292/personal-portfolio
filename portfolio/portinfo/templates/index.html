@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+
+<div class="home">
+    <h1>Chloe Berry</h1>
+    <p1>Hello, my name is Chloe Berry. I am a programmer and an artist! I am passionate about building software for people and helping others in the field I love.</p1>
+    <a href="{% url 'about' %}"><p1>Let's Connect!</p1></a>
+
+
+    {% load static %}
+    <div class="articles">
+        {% for article in articles %}
+        <div class="card">
+            <img src="{{ article.img_link }}" alt="{{ article.title }} cover image">
+            <h2>{{ article.title }}</h2>
+            <p>{{ article.description }}</p>
+            <a href="{{ article.link }}" target="_blank">Read on Medium</a>
+        </div>
+        {% endfor %}
+    </div>
+
+</div>
+
+{% endblock %}
